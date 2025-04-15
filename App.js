@@ -1,0 +1,64 @@
+import React, { useContext } from "react";
+import { SafeAreaView, View } from "react-native";
+import "@expo/metro-runtime";
+import { I18nextProvider } from "react-i18next";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Toaster } from "react-hot-toast";
+import Header from "./src/pages/app-header/Header";
+import Login from "./src/pages/app-body/login/Login";
+import { PaperProvider } from "react-native-paper";
+import i18n from "./src/i18n/i18n-config";
+import { EXPO_BACKEND_API_URL } from "./src/config/environment";
+import { navigateRef } from "./src/navigation/navigationRef";
+import { UserContext, UserProvider } from "./src/contexts/UserContext";
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+  return (
+    <UserProvider>
+      <PaperProvider>
+        <I18nextProvider i18n={i18n}>
+          <AppContent />
+        </I18nextProvider>
+      </PaperProvider>
+    </UserProvider>
+  );
+};
+
+const AppContent = () => {
+  const { isAuthenticated } = useContext(UserContext);
+  const NavigationContainerTheme = {
+    colors: {
+      background: "#FFF",
+    },
+  };
+
+  const linking = {
+    prefixes: [EXPO_BACKEND_API_URL],
+    config: {
+      screens: {
+        "login": "rc-worker/",
+      },
+    },
+  };
+
+  return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
+      <NavigationContainer theme={NavigationContainerTheme} linking={linking} ref={navigateRef}>
+        {isAuthenticated && <Header />}
+          <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, flexDirection: "row" }}>
+              <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"login"}>
+                <Stack.Screen name="login" component={Login} />
+              </Stack.Navigator>
+            </View>
+          </View>
+      </NavigationContainer>
+      <Toaster />
+    </SafeAreaView>
+  );
+};
+
+export default App;
