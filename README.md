@@ -13,7 +13,3 @@
   "baseUrl": "/rc-worker"
 },
 ```
-
-## IMPORTANT
-
-##### One of the file inside Expo Blur npm has forgot to import react. Should manually do after install the react native packages. File name - explo-blur -> build -> BlurView.web.js
