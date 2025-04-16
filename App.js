@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { SafeAreaView, View } from "react-native";
 import "@expo/metro-runtime";
 import { PaperProvider } from "react-native-paper";
@@ -11,8 +11,9 @@ import Login from "@/pages/app-body/login/Login";
 import i18n from "@/i18n/i18n-config";
 import { EXPO_BACKEND_API_URL } from "@/config/environment";
 import { navigateRef } from "@/navigation/navigationRef";
-import { UserContext, UserProvider } from "@/contexts/UserContext";
+import { UserProvider } from "@/contexts/UserContext";
 import Dashboard from "@/pages/app-body/dashboard/Dashboard";
+import useUserContext from "@/hooks/useUserContext";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +30,7 @@ const App = () => {
 };
 
 const AppContent = () => {
-  const { isAuthenticated } = useContext(UserContext);
+  const { isAuthenticated } = useUserContext();
   const NavigationContainerTheme = {
     colors: {
       background: "#FFF",
