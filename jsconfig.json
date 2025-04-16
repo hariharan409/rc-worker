@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],  // Alias '@' maps to the entire 'src' directory
+      "@assets": ["./assets"],  // Alias for assets outside of src
+    }
+  },
+  "exclude": ["node_modules"]
+}

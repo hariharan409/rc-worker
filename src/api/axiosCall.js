@@ -1,6 +1,6 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {EXPO_BACKEND_API_URL} from "../config/environment";
+import {EXPO_BACKEND_API_URL} from "@/config/environment";
 
 export const getRequest = async (path, params, headers = {}) => {
   try {

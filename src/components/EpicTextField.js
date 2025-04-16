@@ -1,7 +1,7 @@
-import React from "react"
-import { Controller } from "react-hook-form"
-import ShowError from "./ShowError"
-import { Text, TextInput, View } from "react-native"
+import React from "react";
+import { Controller } from "react-hook-form";
+import ShowError from "@/components/ShowError";
+import { Text, TextInput, View } from "react-native";
 
 
 const EpicTextField = ({name,control,label,placeHolder,keyboardType="default",error}) => {

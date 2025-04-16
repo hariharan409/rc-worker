@@ -1,8 +1,8 @@
 import React from "react";
 import { Image, StyleSheet, Text, View,useWindowDimensions } from "react-native";
-import CompanyLogo from "../../../assets/pages/app-header/company-logo.png";
-import HeaderMenu from "./HeaderMenu";
-import { LottieJumpingGift } from "../../components/lottie-web-animation/LottieWebAnimation";
+import CompanyLogo from "@assets/pages/app-header/company-logo.png";
+import HeaderMenu from "@/pages/app-header/HeaderMenu";
+import { LottieJumpingGift } from "@/components/lottie-web-animation/LottieWebAnimation";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {

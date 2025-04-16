@@ -1,6 +1,6 @@
 import React,{ useContext, useEffect } from "react";
-import { UserContext } from "../../contexts/UserContext";
-import { FullScreenLoader } from "../Loader";
+import { UserContext } from "@/contexts/UserContext";
+import { FullScreenLoader } from "@/components/Loader";
 
 
 const AuthWrapper = ({navigation,children}) => {

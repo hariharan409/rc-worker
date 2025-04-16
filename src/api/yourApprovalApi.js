@@ -1,4 +1,4 @@
-import { getRequest } from "./axiosCall";
+import { getRequest } from "@/api/axiosCall";
 
 export const getYourPendingApprovalCountAPI = async(email) => {
     try{

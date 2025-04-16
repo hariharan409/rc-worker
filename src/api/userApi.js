@@ -1,4 +1,4 @@
-import { getRequest, postRequest } from "./axiosCall";
+import { getRequest, postRequest } from "@/api/axiosCall";
 
 export const getUserListAPI = async() => {
     try{

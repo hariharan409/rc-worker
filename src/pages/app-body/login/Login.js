@@ -1,10 +1,10 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
-import { LottieWorker } from "../../../components/lottie-web-animation/LottieWebAnimation";
+import { LottieWorker } from "@/components/lottie-web-animation/LottieWebAnimation";
 import { useForm } from "react-hook-form";
-import { FailureToast } from "../../../components/Toast";
-import EpicTextField from "../../../components/EpicTextField";
-import EpicButton from "../../../components/EpicButton";
+import { FailureToast } from "@/components/Toast";
+import EpicTextField from "@/components/EpicTextField";
+import EpicButton from "@/components/EpicButton";
 
 
 const Login = () => {

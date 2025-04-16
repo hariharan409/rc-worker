@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { SafeAreaView, View } from "react-native";
 import "@expo/metro-runtime";
+import { PaperProvider } from "react-native-paper";
 import { I18nextProvider } from "react-i18next";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Toaster } from "react-hot-toast";
-import Header from "./src/pages/app-header/Header";
-import Login from "./src/pages/app-body/login/Login";
-import { PaperProvider } from "react-native-paper";
-import i18n from "./src/i18n/i18n-config";
-import { EXPO_BACKEND_API_URL } from "./src/config/environment";
-import { navigateRef } from "./src/navigation/navigationRef";
-import { UserContext, UserProvider } from "./src/contexts/UserContext";
+import Header from "@/pages/app-header/Header";
+import Login from "@/pages/app-body/login/Login";
+import i18n from "@/i18n/i18n-config";
+import { EXPO_BACKEND_API_URL } from "@/config/environment";
+import { navigateRef } from "@/navigation/navigationRef";
+import { UserContext, UserProvider } from "@/contexts/UserContext";
 
 const Stack = createNativeStackNavigator();
 

@@ -3,7 +3,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { Divider, Menu } from "react-native-paper";
-import { SuccessToast } from "../../components/Toast";
+import { SuccessToast } from "@/components/Toast";
 
 const HeaderMenu = () => {
     const navigation = useNavigation(); // Access the navigation prop

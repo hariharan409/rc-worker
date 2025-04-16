@@ -1,4 +1,4 @@
-import { getRequest, postRequest, postFile } from "./axiosCall";
+import { getRequest, postRequest, postFile } from "@/api/axiosCall";
 
 export const getGiftCategoryAPI = async(giftObject) => {
     try{

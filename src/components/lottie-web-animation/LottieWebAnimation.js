@@ -1,7 +1,7 @@
 import React from "react";
 import LottieView from "lottie-react-native";
 import { View } from "react-native";
-import LottieWorkerAnimation from "../../../assets/lottie/worker.json";
+import LottieWorkerAnimation from "@assets/lottie/worker.json";
 
 
 export const LottieWorker = ({style}) => {
