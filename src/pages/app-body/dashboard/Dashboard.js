@@ -29,8 +29,9 @@ const getStyles = (width) => StyleSheet.create({
         width: "100%",
         minHeight: "100%",
         display: "grid",
-        gridTemplateColumns: `repeat(auto-fit,${width > 767 ? "49.7%" : "100%"})`,
-        gridGap: 10,
+        justifyContent: "center",
+        gridTemplateColumns: `repeat(auto-fit,${width > 767 ? "48.5%" : "100%"})`,
+        gridGap: 15,
         padding: 10
     },
     dashboardCard: {
