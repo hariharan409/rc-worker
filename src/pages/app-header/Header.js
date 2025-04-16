@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, Text, View,useWindowDimensions } from "react-native";
 import CompanyLogo from "@assets/pages/app-header/company-logo.png";
 import HeaderMenu from "@/pages/app-header/HeaderMenu";
-import { LottieJumpingGift } from "@/components/lottie-web-animation/LottieWebAnimation";
+import { LottieWorker } from "@/components/lottie-web-animation/LottieWebAnimation";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 
             {/* Center-aligned Content (Lottie and Text) */}
             <View style={styles.lottieTextContainer}>
-                <LottieJumpingGift style={styles.lottieTextContainer.lottieImage} loop={true} />
+                <LottieWorker style={styles.lottieTextContainer.lottieImage} loop={true} />
                 <Text style={styles.lottieTextContainer.title}>
                     {t("app-header.app-name")}
                 </Text>
@@ -55,9 +55,9 @@ const getStyles = (width) => StyleSheet.create({
         resizeMode: "contain",
     },
     lottieTextContainer: {
-        flex: 2, justifyContent: "center", alignItems: "center", flexDirection: "row",display: width > 730 ? "flex" : "none",
+        flex: 2, justifyContent: "center", alignItems: "center", flexDirection: "row",display: width > 730 ? "flex" : "none",columnGap: 10,
         lottieImage: {
-            width: 70
+            width: 40
         },
         title: {
             fontWeight: "bold", textTransform: "uppercase", fontSize: 14, color: "#003eff", marginLeft: -10

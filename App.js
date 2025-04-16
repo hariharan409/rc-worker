@@ -12,6 +12,7 @@ import i18n from "@/i18n/i18n-config";
 import { EXPO_BACKEND_API_URL } from "@/config/environment";
 import { navigateRef } from "@/navigation/navigationRef";
 import { UserContext, UserProvider } from "@/contexts/UserContext";
+import Dashboard from "@/pages/app-body/dashboard/Dashboard";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ const AppContent = () => {
     config: {
       screens: {
         "login": "rc-worker/",
+        "dashboard": "rc-worker/dashboard"
       },
     },
   };
@@ -52,6 +54,7 @@ const AppContent = () => {
             <View style={{ flex: 1, flexDirection: "row" }}>
               <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"login"}>
                 <Stack.Screen name="login" component={Login} />
+                <Stack.Screen name="dashboard" component={Dashboard} />
               </Stack.Navigator>
             </View>
           </View>

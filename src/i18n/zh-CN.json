@@ -1,13 +1,5 @@
 {
     "app-header": {
-        "app-name": "礼物和招待"
-    },
-    "welcome-screen": {
-        "title": "欢迎来到礼品和酒店管理!",
-        "description": "它旨在简化企业礼品和招待的管理流程，确保企业能够有效地跟踪、组织和管理礼品的分发和招待的提供",
-        "user-email-textbox-label": "用户电子邮件",
-        "next-button-label": "登录",
-        "app-version-text": "应用程序版本",
-        "seatrium-digital-text": "数字座椅"
+        "app-name": "rc工作者"
     }
 }

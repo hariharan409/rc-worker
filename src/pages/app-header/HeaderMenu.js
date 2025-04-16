@@ -12,7 +12,7 @@ const HeaderMenu = () => {
     const MenuButton = () => <Entypo name="log-out" size={30} color="#000" style={{ paddingRight: "10px", cursor: "pointer" }} onPress={() => setShowMenu(true)} />;
 
     const onLogout = async () => {
-        navigation.navigate("welcome-screen");
+        navigation.navigate("login");
         SuccessToast(`You have been successfully logged out!`)
     }
 
