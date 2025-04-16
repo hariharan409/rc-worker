@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Entypo from "@expo/vector-icons/Entypo";
 import { View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
@@ -13,7 +13,7 @@ const HeaderMenu = () => {
 
     const onLogout = async () => {
         navigation.navigate("login");
-        SuccessToast(`You have been successfully logged out!`)
+        SuccessToast(`You have been successfully logged out!`);
     }
 
     return (

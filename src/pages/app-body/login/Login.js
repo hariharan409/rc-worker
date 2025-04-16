@@ -1,30 +1,15 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { LottieWorker } from "@/components/lottie-web-animation/LottieWebAnimation";
-import { useForm } from "react-hook-form";
-import { FailureToast, SuccessToast } from "@/components/Toast";
 import EpicTextField from "@/components/EpicTextField";
 import EpicButton from "@/components/EpicButton";
-import useUserContext from "@/hooks/useUserContext";
+import useLogin from "@/hooks/useLogin";
 
 
 const Login = ({navigation}) => {
-    const { setIsAuthenticated } = useUserContext();
+    const {control,handleSubmit,errors,onFormSubmit} = useLogin(navigation);
     const {width} = useWindowDimensions();
     const styles = getStyles(width);
-    const {control, handleSubmit, formState: {errors}} = useForm({
-        defaultValues: {workPermitID: "",password: ""}
-    });
-
-    const onFormSubmit = (data) => {
-        try {
-            SuccessToast("welcome harihara dhamodaran");
-            setIsAuthenticated(true);
-            navigation.navigate('dashboard');
-        } catch (error) {
-            FailureToast(error.message);
-        }
-    }
 
     return(
         <ScrollView contentContainerStyle={styles.loginContainer}>
