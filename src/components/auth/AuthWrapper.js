@@ -1,10 +1,11 @@
 import React,{ useContext, useEffect } from "react";
 import { UserContext } from "@/contexts/UserContext";
 import { FullScreenLoader } from "@/components/Loader";
+import useUserContext from "@/hooks/useUserContext";
 
 
 const AuthWrapper = ({navigation,children}) => {
-    const { isLoading, isAuthenticated } = useContext(UserContext);
+    const { isLoading, isAuthenticated } = useUserContext();
 
     if(isLoading) {
         return <FullScreenLoader />
@@ -13,7 +14,7 @@ const AuthWrapper = ({navigation,children}) => {
     useEffect(() => {
       if (!isLoading && !isAuthenticated) {
         // If the user is not authenticated, redirect to the welcome screen
-        navigation.navigate('welcome-screen');
+        navigation.navigate('login');
       }
     }, [isLoading]);
 
