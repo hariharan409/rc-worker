@@ -14,7 +14,7 @@ const useLogin = (navigation) => {
         try {
             SuccessToast("welcome harihara dhamodaran");
             setIsAuthenticated(true);
-            navigation.navigate('dashboard');
+            navigation.replace('dashboard');
         } catch (error) {
             FailureToast(error.message);
         }

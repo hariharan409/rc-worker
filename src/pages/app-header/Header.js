@@ -16,24 +16,17 @@ const Header = () => {
             <View style={{ flex: 1 }}>
                     <Image style={styles.logo} source={CompanyLogo} />
             </View>
-
             {/* Center-aligned Content (Lottie and Text) */}
             <View style={styles.lottieTextContainer}>
                 <LottieWorker style={styles.lottieTextContainer.lottieImage} loop={true} />
-                <Text style={styles.lottieTextContainer.title}>
-                    {t("app-header.app-name")}
-                </Text>
+                <Text style={styles.lottieTextContainer.title}>{t("app-header.app-name")}</Text>
             </View>
-
             {/* Right-aligned Content (User email and HeaderMenu) */}
             <View style={styles.trailing}>
-                <Text style={styles.trailing.userEmail}>
-                    harihara.dhamodaran
-                </Text>
+                <Text style={styles.trailing.userEmail}>harihara.dhamodaran</Text>
                 <HeaderMenu />
             </View>
         </View>
-
     )
 }
 

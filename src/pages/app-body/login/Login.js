@@ -21,7 +21,7 @@ const Login = ({navigation}) => {
             <View style={styles.loginCard}>
                 <LottieWorker style={styles.lottieWorkerAnime} />
                 <EpicTextField name="workPermitID" control={control} label="work permit ID" placeHolder="enter work permit ID" keyboardType="default" error={errors.workPermitID} />
-                <EpicTextField name="password" control={control} label="password" placeHolder="enter your password" keyboardType="default" error={errors.password} />
+                <EpicTextField name="password" control={control} label="password" placeHolder="enter your password" keyboardType="default" error={errors.password} secureTextEntry={true} autoComplete="password" />
                 <EpicButton title="LOGIN" onPress={handleSubmit(onFormSubmit)} />
             </View>
         </ScrollView>

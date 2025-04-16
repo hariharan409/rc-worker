@@ -1,20 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Entypo from "@expo/vector-icons/Entypo";
 import { View } from "react-native";
-import { useNavigation } from '@react-navigation/native';
 import { Divider, Menu } from "react-native-paper";
-import { SuccessToast } from "@/components/Toast";
+import useHeader from "@/hooks/useHeader";
 
 const HeaderMenu = () => {
-    const navigation = useNavigation(); // Access the navigation prop
-    const [showMenu, setShowMenu] = useState(false);
+    const {showMenu,setShowMenu,onLogout} = useHeader();
 
     const MenuButton = () => <Entypo name="log-out" size={30} color="#000" style={{ paddingRight: "10px", cursor: "pointer" }} onPress={() => setShowMenu(true)} />;
-
-    const onLogout = async () => {
-        navigation.navigate("login");
-        SuccessToast(`You have been successfully logged out!`);
-    }
 
     return (
         <View>
