@@ -1,6 +1,6 @@
+import "@expo/metro-runtime";
 import React from "react";
 import { SafeAreaView, View } from "react-native";
-import "@expo/metro-runtime";
 import { PaperProvider } from "react-native-paper";
 import { I18nextProvider } from "react-i18next";
 import { NavigationContainer } from "@react-navigation/native";
@@ -14,6 +14,7 @@ import { navigateRef } from "@/navigation/navigationRef";
 import { UserProvider } from "@/contexts/UserContext";
 import Dashboard from "@/pages/app-body/dashboard/Dashboard";
 import useUserContext from "@/hooks/useUserContext";
+import Signup from "@/pages/app-body/signup/Signup";
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,7 @@ const AppContent = () => {
     config: {
       screens: {
         "login": "rc-worker/",
+        "signup": "rc-worker/signup",
         "dashboard": "rc-worker/dashboard"
       },
     },
@@ -55,6 +57,7 @@ const AppContent = () => {
             <View style={{ flex: 1, flexDirection: "row" }}>
               <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"login"}>
                 <Stack.Screen name="login" component={Login} />
+                <Stack.Screen name="signup" component={Signup} />
                 <Stack.Screen name="dashboard" component={Dashboard} />
               </Stack.Navigator>
             </View>

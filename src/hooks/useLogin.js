@@ -20,8 +20,12 @@ const useLogin = (navigation) => {
         }
     }
 
+    const onSignup = () => {
+        navigation.navigate('signup');
+    }
+
     return {
-        control,handleSubmit,errors,onFormSubmit
+        control,handleSubmit,errors,onFormSubmit,onSignup
     }
 
 }

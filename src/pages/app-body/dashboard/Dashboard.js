@@ -41,6 +41,7 @@ const getStyles = (width) => StyleSheet.create({
         alignItems: "center",
         borderRadius: 10,
         padding: 10,
+        cursor: "pointer",
         name: {
             fontSize:width > 767 ? 25 : 15,
             textTransform: "uppercase",

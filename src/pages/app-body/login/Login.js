@@ -7,7 +7,7 @@ import useLogin from "@/hooks/useLogin";
 
 
 const Login = ({navigation}) => {
-    const {control,handleSubmit,errors,onFormSubmit} = useLogin(navigation);
+    const {control,handleSubmit,errors,onFormSubmit,onSignup} = useLogin(navigation);
     const {width} = useWindowDimensions();
     const styles = getStyles(width);
 
@@ -23,6 +23,7 @@ const Login = ({navigation}) => {
                 <EpicTextField name="workPermitID" control={control} label="work permit ID" placeHolder="enter work permit ID" keyboardType="default" error={errors.workPermitID} />
                 <EpicTextField name="password" control={control} label="password" placeHolder="enter your password" keyboardType="default" error={errors.password} secureTextEntry={true} autoComplete="password" />
                 <EpicButton title="LOGIN" onPress={handleSubmit(onFormSubmit)} />
+                <Text style={styles.signupText} onPress={onSignup}>signup</Text>
             </View>
         </ScrollView>
     )
@@ -45,6 +46,13 @@ const getStyles = (width) => StyleSheet.create({
         textAlign: "center",
         fontWeight: "bold",
         display: width > 767 ? "flex" : "none"
+    },
+    signupText: {
+        textAlign: "center",
+        marginTop: 10,
+        textTransform: "capitalize",
+        cursor: "pointer",
+        color: "#0000EE"
     }
 });
 
