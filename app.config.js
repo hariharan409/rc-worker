@@ -1,6 +1,6 @@
 const ENV = {
     development: {
-        name: "GIFT APP DEV",
+        name: "RC-WORKER APP DEV",
         extra: {
             REDIRECT_URL: process.env.EXPO_PUBLIC_DEV_REDIRECT_URL,
             BACKEND_API_URL: process.env.EXPO_PUBLIC_DEV_BACKEND_API_URL,
@@ -9,7 +9,7 @@ const ENV = {
         }
     },
     uat: {
-        name: "GIFT APP UAT",
+        name: "RC-WORKER APP UAT",
         extra: {
             REDIRECT_URL: process.env.EXPO_PUBLIC_UAT_REDIRECT_URL,
             BACKEND_API_URL: process.env.EXPO_PUBLIC_UAT_BACKEND_API_URL,
@@ -18,7 +18,7 @@ const ENV = {
         }
     },
     production: {
-        name: "GIFT APP PROD",
+        name: "RC-WORKER APP PROD",
         extra: {
             REDIRECT_URL: process.env.EXPO_PUBLIC_PROD_REDIRECT_URL,
             BACKEND_API_URL: process.env.EXPO_PUBLIC_PROD_BACKEND_API_URL,
