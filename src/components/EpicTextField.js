@@ -4,14 +4,14 @@ import ShowError from "@/components/ShowError";
 import { Text, TextInput, View } from "react-native";
 
 
-const EpicTextField = ({name,control,label,placeHolder,keyboardType="default",error,...rest}) => {
+const EpicTextField = ({name,control,label,placeHolder,keyboardType="default",required=true,error,...rest}) => {
 
     return(
         <>
             <Controller
                 name={name}
                 control={control}
-                rules={{ required: true }}
+                rules={{ required: required }}
                 render={({ field: { onChange, onBlur, value } }) => (
                     <View style={{ marginTop: 20 }}>
                         <Text style={{ fontSize: 16, fontWeight: "600", textTransform: "capitalize",overflow: "hidden" }} numberOfLines={1}>{label}</Text>
