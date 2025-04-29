@@ -15,6 +15,7 @@ import { UserProvider } from "@/contexts/UserContext";
 import Dashboard from "@/pages/app-body/dashboard/Dashboard";
 import useUserContext from "@/hooks/useUserContext";
 import Signup from "@/pages/app-body/signup/Signup";
+import DeclareMonthlySalary from "@/pages/app-body/declare-monthly-salary/DeclareMonthlySalary";
 
 const Stack = createNativeStackNavigator();
 
@@ -44,7 +45,8 @@ const AppContent = () => {
       screens: {
         "login": "rc-worker/",
         "signup": "rc-worker/signup",
-        "dashboard": "rc-worker/dashboard"
+        "dashboard": "rc-worker/dashboard",
+        "declare-monthly-salary": "rc-worker/declare-monthly-salary"
       },
     },
   };
@@ -59,6 +61,7 @@ const AppContent = () => {
                 <Stack.Screen name="login" component={Login} />
                 <Stack.Screen name="signup" component={Signup} />
                 <Stack.Screen name="dashboard" component={Dashboard} />
+                <Stack.Screen name="declare-monthly-salary" component={DeclareMonthlySalary} />
               </Stack.Navigator>
             </View>
           </View>
