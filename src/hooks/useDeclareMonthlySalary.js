@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 
 const useDeclareMonthlySalary = () => {
     const navigation = useNavigation();
-    const {control, handleSubmit, formState: {errors}} = useForm({
-        defaultValues: {companyName: "",salaryMonth: null,salaryCredited: null,salaryCreditedOn: null,remarks: ""}
+    const {control, handleSubmit,watch, formState: {errors}} = useForm({
+        defaultValues: {companyName: "",salaryMonth: null,salaryCredited: false,salaryCreditedOn: null,remarks: ""}
     });
 
     const onFormSubmit = (data) => {
@@ -20,7 +20,7 @@ const useDeclareMonthlySalary = () => {
     }
 
     return {
-        control,errors,handleSubmit,onFormSubmit
+        control,errors,handleSubmit,onFormSubmit,watch
     }
 }
 
