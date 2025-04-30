@@ -18,9 +18,11 @@ const DeclareMonthlySalary = () => {
                 <Text style={styles.title}>declare monthly salary</Text>
                 <EpicTextField name="companyName" control={control} label="company name" placeHolder="enter company name" keyboardType="default" error={errors.companyName} />
                 <EpicDatePicker name="salaryMonth" control={control} label="salary month" error={errors.salaryMonth} />
+                <EpicTextField name="remarks" control={control} label="remarks" placeHolder="enter remarks" keyboardType="default" required={false}/>
                 <EpicCheckBox name="salaryCredited" control={control} label="salary credited"/>
-                {watch("salaryCredited") && <EpicDatePicker name="salaryCreditedOn" control={control} label="salary credited on" error={errors.salaryCreditedOn} />}
-                <EpicTextField name="remarks" control={control} label="remarks" placeHolder="enter remarks" keyboardType="default" error={errors.remarks} required={false}/>
+                <View style={{opacity: watch("salaryCredited") ? 1 : 0}}>
+                    {<EpicDatePicker name="salaryCreditedOn" control={control} label="salary credited on" error={errors.salaryCreditedOn} required={watch("salaryCredited")} />}
+                </View>
                 <EpicButton title="SUBMIT" onPress={handleSubmit(onFormSubmit)} />
             </View>
         </ScrollView>
@@ -33,13 +35,13 @@ const getStyles = (width) => StyleSheet.create({
     },
     declarationCard: {
         width: width > 767 ? 400 : "100%",
-        minHeight: 500
     },
     title: {
         textAlign: "center",
         fontSize: 30,
         fontWeight: "bold",
-        textTransform: "capitalize"
+        textTransform: "capitalize",
+        
     },
 })
 

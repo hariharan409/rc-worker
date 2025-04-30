@@ -10,7 +10,7 @@ import ShowError from '@/components/ShowError';
  * A reusable date picker component integrated with react-hook-form.
  * Wrap your app with PaperProvider and SafeAreaProvider once at the root.
  */
-const EpicDatePicker = ({ name, control, label, error }) => {
+const EpicDatePicker = ({ name, control, label, error,required=true }) => {
   const [open, setOpen] = useState(false);
 
   // Customize the theme
@@ -23,7 +23,7 @@ const EpicDatePicker = ({ name, control, label, error }) => {
     <>
         <Controller
         control={control}
-        rules={{ required: true }}
+        rules={{ required: required }}
         name={name}
         render={({ field: { onChange, value } }) => (
             <PaperProvider theme={customTheme}>
